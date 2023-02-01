@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: yellow;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.image{
+    display: inline-block;
+}
+
+.cadre {
+    width: 65%;
+    background-color: yellowgreen;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: ;
+}
+
+img {
+    width: 20%;
+}
