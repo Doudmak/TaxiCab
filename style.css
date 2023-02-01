@@ -1,0 +1,36 @@
+body{
+    background-color: #131515;
+    color:white;
+    font-family: calibri;
+}
+
+header{
+
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo{
+
+    width: 8%;
+    margin-left: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li{
+    margin-left: 13px;
+    margin-right: 26px;
+    font-size: 20px;
+}
+
+.main{
+
+    display: flex;
+    justify-content: space-around;
+}
