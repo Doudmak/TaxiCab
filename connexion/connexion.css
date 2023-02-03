@@ -7,14 +7,10 @@ body{
     background-color: #131515;
 }
 
-.container {
+.container, .image {
     background-color: cornflowerblue;
     border-radius: 8px;
     text-align: center;
-}
-
-.image{
-
 }
 
 div.cadre {
