@@ -47,6 +47,8 @@ nav li {
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    background-image: url(Image/sunset.jpg);
+    background-size: contain;
 }
 
 .flex {
