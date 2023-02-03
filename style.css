@@ -1,5 +1,5 @@
 body {
-    background-color: #292F36;
+    background-color: #EC9A29;
     color:white;
     font-family: calibri;
     height: 90vh;
@@ -12,6 +12,8 @@ header {
     height: 10vh;
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 header .logo {
@@ -27,7 +29,7 @@ nav ul {
 }
 
 nav li {
-    color:  black;
+    color: black;
     margin-left: 13px;
     margin-right: 26px;
     font-size: 20px;
@@ -56,7 +58,7 @@ nav li {
 
     height: 400px;
     width: 400px;
-    background-color: black;
+    background-color: #292F36;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -69,7 +71,7 @@ nav li {
 .cadre h2 {
 
     font-size: 35px;
-    color: limegreen;
+    color: white;
 
 }
 
@@ -78,7 +80,7 @@ nav li {
     font-size: 20px;
     margin: 0px;
     margin-bottom: 5px;
-    color: limegreen;
+    color: white;
 }
 .title,.position,.destination {
 
