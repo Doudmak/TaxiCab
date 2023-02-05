@@ -1,9 +1,185 @@
 *{
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
 }
 
-body{
-    background-image: url(image/city.jpg);
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    background-image: url(image/city2.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
+
+:root{
+    --bg-color: #FFF;
+    --text-color: #221314;
+    --second-color: #6e54fa;
+    --big-font: 6rem;
+    --h2-font:  3rem;
+    --p-font: 1.1rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 30px 16%;
+    transition: ease .40s;
+}
+
+.logo{
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:  var(--bg-color);
+}
+
+nav ul {
+
+    display: flex;
+    align-items: center;
+}
+nav ul li a{
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+    margin-left: 2px;
+}
+
+.menu_hover:hover{
+
+     background: var(--bg-color);
+     color: var(--text-color);
+     box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+     border-radius: 4px;
+}
+
+#user-icon{
+
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    padding: 5px;
+    transition: ease .40s;
+}
+#user-icon:hover {
+
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+    border-radius: 4px;    
+}
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+
+.test{
+    width: 60%;
+    height: 40%;
+    background-color: #6e54fa;
+}
+
+.container{
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form-container {
+    background-color: #6e54fa;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    
+    
+}
+
+.sign-up-container{
+    left: 0;
+    width: 50%;
+}
+
+#inscription{
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+form{
+    background-color: rgba(94, 185, 76, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+input{
+    background-color: #adf0d1 ;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+button{
+    background-color: #adf0d1 ;
+    color: #00203f;
+    border: 1px solid #adf0d1;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border-color: rgba(0, 32, 63, 0.45);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #00203f;
+    color: #adf0d1;
+    transition: 0.3s ease-in;
+}
+
+.social-container{
+    background-color: #6e54fa;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
