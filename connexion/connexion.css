@@ -3,9 +3,11 @@
     padding: 0px;
 }
 
+
 body{
-    background-color: #131515;
+    background-image: url(image\city.jpg);
 }
+
 
 .container, .image {
     background-color: cornflowerblue;
