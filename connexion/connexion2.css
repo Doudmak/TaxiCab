@@ -117,11 +117,10 @@ nav ul li a{
 }
 
 .form-container {
-    background-color: #6e54fa;
     position: absolute;
     top: 0;
     height: 100%;
-    
+    border: #221314 solid 1px;
     
 }
 
@@ -131,13 +130,15 @@ nav ul li a{
 }
 
 #inscription{
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    color: #00203f;
+
 }
 
 form{
-    background-color: rgba(94, 185, 76, 0.5);
+    background-color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,6 +154,9 @@ input{
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+    color: #00203f;
+    border-radius: 3px;
+    box-shadow: #545050 3px 3px 5px;
 }
 
 button{
@@ -165,6 +169,8 @@ button{
     letter-spacing: 1px;
     border-radius: 50px;
     border-color: rgba(0, 32, 63, 0.45);
+    box-shadow: #545050 3px 3px 5px;
+    font-weight: bold;
 }
 
 button:hover{
@@ -175,7 +181,7 @@ button:hover{
 }
 
 .social-container{
-    background-color: #6e54fa;
+    margin-bottom: 25px;
     width: 50%;
     height: 50px;
     display: flex;
@@ -183,3 +189,28 @@ button:hover{
     align-items: center;
 }
 
+.bx{
+    font-size: 25px;
+    color: #00203f;
+    padding : 3px;  
+}
+
+.bx:hover{
+    font-size: 25px;
+    color: #adf0d1;
+}
+
+a.icons{
+    border: #00203f solid 2px;
+    padding : 3px 4px 3px 4px;
+    border-radius: 50%;
+    background-color: #adf0d1;
+    box-shadow: #545050 3px 3px 5px;
+    display: flex;
+    margin-top: -15px;
+}
+
+a.icons:hover{
+    background-color: #00203f;
+    transition: 300ms ease-in;
+}
