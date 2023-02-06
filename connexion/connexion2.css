@@ -134,7 +134,7 @@ nav ul li a{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #00203f;
-
+    margin-bottom: 70x;
 }
 
 form{
@@ -168,7 +168,6 @@ button{
     margin-top: 24px;
     letter-spacing: 1px;
     border-radius: 50px;
-    border-color: rgba(0, 32, 63, 0.45);
     box-shadow: #545050 3px 3px 5px;
     font-weight: bold;
 }
@@ -176,6 +175,7 @@ button{
 button:hover{
     cursor: pointer;
     background-color: #00203f;
+    border: #00203f 1px solid;
     color: #adf0d1;
     transition: 0.3s ease-in;
 }
@@ -200,17 +200,17 @@ button:hover{
     color: #adf0d1;
 }
 
-a.icons{
-    border: #00203f solid 2px;
+#icons{
     padding : 3px 4px 3px 4px;
     border-radius: 50%;
     background-color: #adf0d1;
     box-shadow: #545050 3px 3px 5px;
     display: flex;
     margin-top: -15px;
+    padding: 10px;
 }
 
-a.icons:hover{
+#icons:hover{
     background-color: #00203f;
     transition: 300ms ease-in;
 }
