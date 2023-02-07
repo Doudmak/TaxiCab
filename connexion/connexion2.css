@@ -148,6 +148,7 @@ input.np{
     margin-bottom: 35px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-size: 35px;
     color: #00203f;
     margin-bottom: 70x;
 }
@@ -164,7 +165,7 @@ form{
 }
 
 input{
-    background-color: #adf0d1 ;
+    background-color: #b2add1 ;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
@@ -175,7 +176,7 @@ input{
 }
 
 button{
-    background-color: #adf0d1 ;
+    background-color: #b2add1 ;
     color: #00203f;
     border: none;
     font-size: 16px;
@@ -216,7 +217,7 @@ button:hover{
 #icons{
     padding : 3px 4px 3px 4px;
     border-radius: 50%;
-    background-color: #adf0d1;
+    background-color: #b2add1;
     box-shadow: #545050 3px 3px 5px;
     display: flex;
     margin-top: -15px;
@@ -224,22 +225,8 @@ button:hover{
 }
 
 #icons:hover{
-    background-color: #00203f;
-    transition: 300ms ease-in;
-}
-
-
-
-.overlay{
-
-    background: #adf0d1;
-    color: #00203f;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+    background-color: #D17185;
+    transition: 200ms ease-in;
 }
 
 .overlay-panel{
@@ -256,6 +243,7 @@ button:hover{
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
     background: linear-gradient(#e66465, #9198e5);
+    overflow: hidden;
 
 }
 
@@ -264,11 +252,12 @@ button:hover{
 }
 
 p{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
     margin: 20px 0 30px;
+    margin-bottom: 100px;
 }
 
 button.ghost{
@@ -277,4 +266,9 @@ button.ghost{
 
 button:active{
     transform: scale(0.95);
+}
+
+h1.accroche{
+    font-size: 50px;
+    font-weight:var(900);
 }
