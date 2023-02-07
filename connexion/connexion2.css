@@ -114,19 +114,34 @@ nav ul li a{
     height: 60%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: ease .40s;
 }
 
 .form-container {
     position: absolute;
     top: 0;
-    height: 100%;
-    border: #221314 solid 1px;
-    
+    height: 100%;   
 }
 
 .sign-up-container{
     left: 0;
     width: 50%;
+}
+
+.log-in-container{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.nom-prenom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input.np{
+    width: 47%;
 }
 
 #inscription{
@@ -213,4 +228,39 @@ button:hover{
 #icons:hover{
     background-color: #00203f;
     transition: 300ms ease-in;
+}
+
+.overlay-container{
+    position: absolute;
+    top : 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.overlay{
+    background: linear-gradient(to right (#adf0d1, #e7f0fd));
+    background: #adf0d1;
+    color: #00203f;
+    position: relative;
+    left: -100px;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+}
+
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0h;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
 }
