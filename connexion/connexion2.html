@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="connexion2.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,53 +30,54 @@
      </header>
 
      <div class="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1 id="inscription">Inscription</h1>
-                <div class="social-container">
-                    <a href="https://www.instagram.com" target="_blank" class="icons"><div class="bx bxl-instagram" id="icons"></div></a>
-                    <a href="https://fr.linkedin.com/" target="_blank" class="icons"><div class="bx bxl-linkedin" id="icons"></div></a>
-                    <a href="https://twitter.com/?lang=fr" target="_blank" class="icons"><div class="bx bxl-twitter" id="icons"></div></a>
-                    
-                </div>
-                <div class="nom-prenom">
-                    <input type="text" placeholder="Nom" class="np"> 
-                    <input type="text" placeholder="Prenom" class="np">
-                </div>
-                <input type="email" placeholder="Identifiant (mail)">
-                <input type="password" placeholder="Mot de passe">
-                <button>Créer le compte</button>
-            </form>
-        </div>
-        <div class="form-container log-in-container">
-            <form action="#">
-                <h1 id="inscription">Se connecter</h1>
-                <div class="social-container">
-                    <a href="https://www.instagram.com" target="_blank" class="icons"><div class="bx bxl-instagram" id="icons"></div></a>
-                    <a href="https://fr.linkedin.com/" target="_blank" class="icons"><div class="bx bxl-linkedin" id="icons"></div></a>
-                    <a href="https://twitter.com/?lang=fr" target="_blank" class="icons"><div class="bx bxl-twitter" id="icons"></div></a>
-                    
-                </div>
-                
-                <input type="email" placeholder="Identifiant (mail)">
-                <input type="password" placeholder="Mot de passe">
-                <button>Connexion</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos officia officiis amet?</p>
-                    <button class="ghost" id="login">Se connecter</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos officia officiis amet?</p>
-                    <button class="ghost" id="sighUp">Créer un compte</button>
-                </div>
+        <div id="formulaire1">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1 id="inscription">Inscription</h1>
+                    <div class="social-container">
+                        <a href="https://www.instagram.com" target="_blank" class="icons"><div class="bx bxl-instagram" id="icons"></div></a>
+                        <a href="https://fr.linkedin.com/" target="_blank" class="icons"><div class="bx bxl-linkedin" id="icons"></div></a>
+                        <a href="https://twitter.com/?lang=fr" target="_blank" class="icons"><div class="bx bxl-twitter" id="icons"></div></a>
+                        
+                    </div>
+                    <div class="nom-prenom">
+                        <input type="text" placeholder="Nom" class="np"> 
+                        <input type="text" placeholder="Prenom" class="np">
+                    </div>
+                    <input type="email" placeholder="Identifiant (mail)">
+                    <input type="password" placeholder="Mot de passe">
+                    <button>Créer le compte</button>
+                </form>
+            </div>
+            <div class="overlay-panel overlay-left">
+                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos officia officiis amet?</p>
+                <button class="ghost" onclick="transition1()">Créer un compte</button>
             </div>
         </div>
+        
+        <div id="formulaire2">
+            <div class="form-container log-in-container">
+                <form action="#">
+                    <h1 id="inscription">Se connecter</h1>
+                    <div class="social-container">
+                        <a href="https://www.instagram.com" target="_blank" class="icons"><div class="bx bxl-instagram" id="icons"></div></a>
+                        <a href="https://fr.linkedin.com/" target="_blank" class="icons"><div class="bx bxl-linkedin" id="icons"></div></a>
+                        <a href="https://twitter.com/?lang=fr" target="_blank" class="icons"><div class="bx bxl-twitter" id="icons"></div></a>
+                        
+                    </div>
+                    
+                    <input type="email" placeholder="Identifiant (mail)">
+                    <input type="password" placeholder="Mot de passe">
+                    <button>Connexion</button>
+                </form>
+            </div>    
+            <div class="overlay-panel overlay-right">
+                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos officia officiis amet?</p>
+                <button class="ghost" id="login" onclick="transition2()">Se connecter</button>
+            </div>      
+        </div>      
      </div>
     
 </body>

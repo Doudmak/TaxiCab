@@ -121,17 +121,17 @@ nav ul li a{
     position: absolute;
     top: 0;
     height: 100%;   
+    transition: 0.6s ease-in-out;
 }
 
 .sign-up-container{
-    left: 0;
+    right: 0;
     width: 50%;
 }
 
 .log-in-container{
     left: 0;
     width: 50%;
-    z-index: 2;
 }
 
 .nom-prenom{
@@ -177,7 +177,7 @@ input{
 button{
     background-color: #adf0d1 ;
     color: #00203f;
-    border: 1px solid #adf0d1;
+    border: none;
     font-size: 16px;
     padding: 16px 32px;
     margin-top: 24px;
@@ -189,9 +189,7 @@ button{
 
 button:hover{
     cursor: pointer;
-    background-color: #00203f;
     border: #00203f 1px solid;
-    color: #adf0d1;
     transition: 0.3s ease-in;
 }
 
@@ -230,25 +228,18 @@ button:hover{
     transition: 300ms ease-in;
 }
 
-.overlay-container{
-    position: absolute;
-    top : 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 100;
-}
+
 
 .overlay{
-    background: linear-gradient(to right (#adf0d1, #e7f0fd));
+
     background: #adf0d1;
     color: #00203f;
     position: relative;
-    left: -100px;
+    left: -100%;
     height: 100%;
     width: 200%;
     transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
 }
 
 .overlay-panel{
@@ -259,8 +250,31 @@ button:hover{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    top: 0h;
+    top: 0;
     height: 100%;
     width: 50%;
     transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    background: linear-gradient(#e66465, #9198e5);
+
+}
+
+.overlay-right{
+    right:0;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+button.ghost{
+    background-color: transparent;
+}
+
+button:active{
+    transform: scale(0.95);
 }
