@@ -12,6 +12,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     background-image: url(image/city2.jpg);
+    background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,12 +187,12 @@ button{
     border-radius: 50px;
     box-shadow: #545050 3px 3px 5px;
     font-weight: bold;
+    border: none;
+    text-decoration: none;
 }
 
 button:hover{
     cursor: pointer;
-    border: #00203f 1px solid;
-    transition: 0.3s ease-in;
 }
 
 .social-container{
@@ -264,8 +265,8 @@ button.ghost{
     background-color: transparent;
 }
 
-button:active{
-    transform: scale(0.95);
+.ghost:hover{
+    box-shadow: rgb(69, 73, 77) 3px 3px 6px 0px inset;
 }
 
 h1.accroche{
