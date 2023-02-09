@@ -193,6 +193,7 @@ button{
 
 button:hover{
     cursor: pointer;
+    box-shadow: rgb(69, 73, 77) 3px 3px 6px 0px inset;
 }
 
 .social-container{
