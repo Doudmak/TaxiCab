@@ -39,7 +39,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    padding: 30px 16%;
+    padding: 30px 17%;
     transition: ease .40s;
 }
 
@@ -190,8 +190,7 @@ button{
 
 button:hover{
     cursor: pointer;
-    border: #00203f 1px solid;
-    transition: 0.3s ease-in;
+    box-shadow: rgb(59, 60, 61) 3px 3px 6px 0px inset
 }
 
 .social-container{
