@@ -267,12 +267,11 @@ section {
 
     width: 100%;
     height: 85vh;
-
 }
 
 .informations_title {
 
-    padding-top: 100px;
+    padding-top: 70px;
     font-size: var(--h2-font);
 }
 
@@ -281,16 +280,18 @@ section {
 
     width: 600px;
     text-align: justify;
+    font-family: calibri;
 }
 
 .informations_container {
 
     display: flex;    
     padding-top: 60px;
+    justify-content: space-between ;
+    align-items: center;
 }
 
 .informations_img {
-
 
 }
 
@@ -301,12 +302,20 @@ section {
 
 .box_img {
 
-
-    border: 1px solid black;
-    padding: 20px;
+    padding: 20px 35px;
+    margin: 15px 0px 0px 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .icon_informations{
 
     font-size: 70px;
+    color: var(--second-color);
+}
+
+.description {
+
+    text-align: center;
+    font-family: calibri;
 }
