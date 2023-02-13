@@ -271,3 +271,11 @@ h1.accroche{
     font-size: 50px;
     font-weight:var(900);
 }
+
+.esp-chauff{
+    font-size: 50px;
+    font-weight:var(900);
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    margin-bottom: 75px;
+}

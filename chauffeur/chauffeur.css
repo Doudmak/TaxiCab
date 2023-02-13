@@ -1,17 +1,3 @@
-body {
-    background: url(../image/fond-ecran-chauffeur.jpg);
-    color: var(--text-color);
-}
-
-:root{
-    --bg-color: #FFF;
-    --text-color: #221314;
-    --second-color: #6e54fa;
-    --big-font: 3rem;
-    --h2-font:  2.5rem;
-    --p-font: 1.1rem;
-}
-
 *{
     padding: 0px;
     margin: 0px;
@@ -22,29 +8,40 @@ body {
     scroll-behavior: smooth;
 }
 
+body {
+    background: url(image/taxi.jpg);
+    color: var(--text-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+:root{
+    --bg-color: #FFF;
+    --text-color: #221314;
+    --second-color: #6e54fa;
+    --big-font: 6rem;
+    --h2-font:  3rem;
+    --p-font: 1.1rem;
+}
+
 header{
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 2000;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 16%;
+    background: transparent;
+    padding: 30px 17%;
     transition: ease .40s;
-}
-
-header.sticky {
-
-    background: var(--bg-color);
-    padding: 10px 14%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.sticky nav ul li a, .sticky .logo, .sticky #user-icon {
-
-    color: var(--text-color);
 }
 
 .logo{
@@ -102,4 +99,185 @@ nav ul li a{
     z-index: 1001;
     cursor: pointer;
     display: none;
+}
+
+.test{
+    width: 60%;
+    height: 40%;
+    background-color: #6e54fa;
+}
+
+.container{
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+    width: 60%;
+    height: 60%;
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: ease .40s;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;   
+    transition: 0.6s ease-in-out;
+}
+
+.sign-up-container{
+    right: 0;
+    width: 50%;
+}
+
+.log-in-container{
+    left: 0;
+    width: 50%;
+}
+
+.nom-prenom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input.np{
+    width: 47%;
+}
+
+#inscription{
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #00203f;
+    margin-bottom: 70x;
+}
+
+form{
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+input{
+    background-color: #b2add1 ;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: #00203f;
+    border-radius: 3px;
+    box-shadow: #545050 3px 3px 5px;
+}
+
+button{
+    background-color: #b2add1 ;
+    color: #00203f;
+    border: none;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    box-shadow: #545050 3px 3px 5px;
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: rgb(59, 60, 61) 3px 3px 6px 0px inset
+}
+
+.social-container{
+    margin-bottom: 25px;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bx{
+    font-size: 25px;
+    color: #00203f;
+    padding : 3px;  
+}
+
+.bx:hover{
+    font-size: 25px;
+    color: #adf0d1;
+}
+
+#icons{
+    padding : 3px 4px 3px 4px;
+    border-radius: 50%;
+    background-color: #b2add1;
+    box-shadow: #545050 3px 3px 5px;
+    display: flex;
+    margin-top: -15px;
+    padding: 10px;
+}
+
+#icons:hover{
+    background-color: #D17185;
+    transition: 200ms ease-in;
+}
+
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    background: linear-gradient(#e66465, #9198e5);
+    overflow: hidden;
+
+}
+
+.overlay-right{
+    right:0;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 100px;
+    
+}
+
+button.ghost{
+    background-color: transparent;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+h1.accroche{
+    font-size: 50px;
+    font-weight:var(900);
+    margin-bottom: 50px;
+}
+
+.esp-chauff{
+    font-size: 50px;
+    font-weight:var(900);
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    margin-bottom: 75px;
 }
