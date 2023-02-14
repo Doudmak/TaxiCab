@@ -28,37 +28,44 @@
             </ul>
         </nav>
     </header>
-    <p class="esp-chauff">Espace chauffeur</p>
     <div class="container">
         <div id="formulaire1">
-            <div class="form-container sign-up-container">
+            
+            <div class="form2-container sign-up-container ">
+                <div class="haut">
+                    <div class='bx bx-chevrons-left flecheRetour'></div>
+                    <a href="chauffeur.html"><p class="retour">Retour</p></a>
+                </div>
                 <form action="#">
                     <h1 id="inscription">Inscription</h1>
                     
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Nom" class="np" required> 
-                        <input type="text" placeholder="Prenom" class="np" required>
+                        <input type="text" placeholder="Nom" class="np insc" required> 
+                        <input type="text" placeholder="Prenom" class="np insc" required>
                     </div>
-                    <input type="text" placeholder="Numéro d'immatriculation">
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Numéro de permis de conduire" class="np">
-                        <input type="text" placeholder="Date d'obtention du permis" class="np">
+                        <input type="text" placeholder="Numéro de permis de conduire" class="np insc">
+                        <input type="text" placeholder="Date d'obtention du permis" class="np insc">
+                    </div>
+                    <div class="nom-prenom">
+                        <input type="text" placeholder="Adresse" class="np insc">
+                        <input type="text" placeholder="Numéro d'immatriculation" class="np insc">
                     </div>
                     
-                    <input type="text" placeholder="Adresse">
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Ville" class="np">
-                        <input type="text" placeholder="Code Postal" class="np">
+                        <input type="text" placeholder="Ville" class="np insc">
+                        <input type="text" placeholder="Code Postal" class="np insc">
                     </div>
-                    <input type="email" placeholder="Identifiant (mail)" required>
-                    <input type="password" placeholder="Mot de passe" required>
-                    <button>Créer le compte</button>
+                    <div class="nom-prenom">
+                        <input type="email" placeholder="Identifiant (mail)" class="np insc" required>
+                        <input type="password" placeholder="Mot de passe" class="np insc" required>
+                    </div>
+                    
+                    <div class="bas">
+                        <button>Créer le compte</button>
+                    </div>
+                    
                 </form>
-            </div>
-            <div class="overlay-panel overlay-left">
-                <h1 class="accroche">Heureux de vous revoir !</h1>
-                <p>Vous êtes chauffeur pour TaxCAB et disposez d'un compte ? <br> Cliquez ci-dessous pour vous connecter à votre compte.</p>
-                <button class="ghost" onclick="transition1()">Se connecter</button>
             </div>
         </div>
         
