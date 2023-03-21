@@ -64,6 +64,7 @@ nav ul {
     display: flex;
     align-items: center;
 }
+
 nav ul li a{
     color: var(--bg-color);
     font-size: var(--p-font);
@@ -151,7 +152,7 @@ section {
     border-bottom-right-radius: 34px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .infos {
@@ -163,15 +164,19 @@ section {
 .img-profile {
     width : 100px;
     height: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+}
+
+#etoiles {
+    width: 180px;
+    margin-bottom: 20px;
 }
 
 .ligne {
-    width: 100%;
     height : 1px;
-    border: 1px solid black;
     margin-top: 10px;
     margin-bottom: 10px;
+    visibility: hidden;
 }
 
 #ligne-spe {
@@ -191,4 +196,32 @@ button{
 button:hover {
     cursor: pointer;
     box-shadow: rgb(59, 60, 61) 3px 3px 6px 0px inset
+}
+
+.historique-container {
+    /*background-color: red;*/
+    margin-top: 20px;
+}
+
+#histo {
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.ligne-resa {
+    margin-top: 20px;
+
+}
+
+.row {
+    display: flex;
+}
+
+i {
+    margin-right: 5px;
+}
+
+#row-price {
+    margin-top: 10px;
+    font-size: 25px;
 }
