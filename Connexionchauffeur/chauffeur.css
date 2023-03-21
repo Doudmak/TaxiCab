@@ -9,9 +9,10 @@
 }
 
 body {
-    background: var(--bg-color);
+    background: url(image/taxi.jpg);
     color: var(--text-color);
-    background-image: url(image/city2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,8 +118,6 @@ nav ul li a{
     border-radius: 32px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: ease .40s;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .form-container {
@@ -129,8 +128,7 @@ nav ul li a{
 }
 
 .sign-up-container{
-    right: 0;
-    width: 50%;
+    width: 100%;
 }
 
 .log-in-container{
@@ -145,16 +143,17 @@ nav ul li a{
 }
 
 input.np{
-    width: 47%;
+    width: 49%;
 }
 
 #inscription{
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 35px;
     color: #00203f;
     margin-bottom: 70x;
+    margin-top: -20px;
 }
 
 form{
@@ -162,6 +161,15 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+form2{
+    background-color: #FFF;
+    display: flex;
     flex-direction: column;
     padding: 0 50px;
     height: 100%;
@@ -259,8 +267,8 @@ p{
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
-    margin: 20px 0 30px;
     margin-bottom: 100px;
+    
 }
 
 button.ghost{
@@ -274,6 +282,7 @@ button:active{
 h1.accroche{
     font-size: 50px;
     font-weight:var(900);
+    margin-bottom: 50px;
 }
 
 .esp-chauff{
@@ -284,9 +293,19 @@ h1.accroche{
     margin-bottom: 75px;
 }
 
-.connexionChauffeur{
-    color: rgb(58, 55, 55);
-    margin-bottom: -100px;
-    font-size: x-small;
+.insc{
+    background-color: #ffffff;
+}
+
+.haut{
+    left: 0;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 0px 10px;
+}
+
+.retour{
+    color: black;
     text-decoration: underline;
+    margin-bottom: 0px;
 }

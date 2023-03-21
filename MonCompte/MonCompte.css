@@ -1,0 +1,227 @@
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    background-image: url(images/city2.jpg);
+}
+
+:root{
+    --bg-color: #FFF;
+    --text-color: #221314;
+    --second-color: #6e54fa;
+    --big-font: 3rem;
+    --h2-font:  2.5rem;
+    --p-font: 1.1rem;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 30px 16%;
+    transition: ease .40s;
+}
+
+header.sticky {
+
+    background: var(--bg-color);
+    padding: 10px 14%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sticky nav ul li a, .sticky .logo, .sticky #user-icon {
+
+    color: var(--text-color);
+}
+
+.logo{
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:  var(--bg-color);
+}
+
+nav ul {
+
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+    margin-left: 2px;
+}
+
+.menu_hover:hover{
+
+     background: var(--bg-color);
+     color: var(--text-color);
+     box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+     border-radius: 4px;
+}
+
+#user-icon{
+
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    padding: 5px;
+    transition: ease .40s;
+}
+#user-icon:hover {
+
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+    border-radius: 4px;    
+}
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+
+    padding: 40px 5%;
+}
+
+.monCompte {
+    position: relative;
+    width: 100%;
+    background-position: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    
+    width: 65%;
+    height: 600px;
+    
+    display: flex;
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.left {
+    left: 0;
+    width: 30%;
+    background: linear-gradient(#e66465, #9198e5);
+    border-top-left-radius: 34px;;
+    border-bottom-left-radius: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    right: 0;
+    width: 70%;
+    background-color: #FFF;
+    border-top-right-radius: 34px;;
+    border-bottom-right-radius: 34px;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.infos {
+    
+    text-align: center;
+    font-size: var(--p-font);
+}
+
+.img-profile {
+    width : 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#etoiles {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.ligne {
+    height : 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+#ligne-spe {
+    margin-bottom: 60px;
+}
+
+button{
+    background-color: transparent ;
+    color: #00203f;
+    border: none;
+    font-size: 16px;
+    padding : 5px 10px 5px 10px;
+    border-radius: 50px;
+    box-shadow: #545050 3px 3px 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: rgb(59, 60, 61) 3px 3px 6px 0px inset
+}
+
+.historique-container {
+    /*background-color: red;*/
+    margin-top: 20px;
+}
+
+#histo {
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.ligne-resa {
+    margin-top: 20px;
+
+}
+
+.row {
+    display: flex;
+}
+
+i {
+    margin-right: 5px;
+}
+
+#row-price {
+    margin-top: 10px;
+    font-size: 25px;
+}
