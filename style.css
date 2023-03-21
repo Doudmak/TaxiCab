@@ -280,7 +280,6 @@ section {
 
     width: 600px;
     text-align: justify;
-    font-family: calibri;
 }
 
 .informations_container {
@@ -319,3 +318,48 @@ section {
     text-align: center;
     font-family: calibri;
 }
+
+
+/*         CHAUFFEUR         */ 
+
+#Chauffeur{
+
+    background-image: url(Image/driver.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.chauffeur {
+
+    width: 100%;
+    height: 85vh;
+    display: flex;
+}
+
+.flex_text_chauffeur{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: white;
+}
+
+.title_chauffeur{
+
+    padding-top: 100px;
+}
+
+.title_chauffeur h2 {
+
+    font-size: var(--h2-font);
+}
+
+.description_chauffeur {
+
+    padding-top: 30px;
+    width: 500px;
+    text-align: justify;
+}
+
