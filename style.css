@@ -319,6 +319,21 @@ section {
     font-family: calibri;
 }
 
+/*           CLIENT          */
+
+#Client{
+
+    background-image: url(Image/clienttaxi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#img3 {
+
+    border-radius: 0%;
+}
+
 
 /*         CHAUFFEUR         */ 
 
@@ -342,13 +357,27 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     color: white;
 }
 
+.transparent-box{
+
+    padding: 55px 55px;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    width: 610px;
+    height: 319px;
+
+
+}
+
 .title_chauffeur{
 
-    padding-top: 100px;
+    /*padding-top: 100px;*/
 }
 
 .title_chauffeur h2 {
@@ -357,9 +386,54 @@ section {
 }
 
 .description_chauffeur {
-
+    display: flex;
+    align-items: center;
     padding-top: 30px;
     width: 500px;
     text-align: justify;
+    font-family: calibri;
 }
 
+.description_chauffeur-img{
+    padding-right: 20px;
+    text-align: center;
+}
+
+.description_chauffeur h3{
+
+    color: lightgrey;
+    padding-bottom: 10px;
+}
+
+.description-image-chauffeur {
+
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+#img2 {
+    padding: 0px;
+    margin-left: 20px;
+
+}
+
+.faq img{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.faq h3{
+
+    font-size: 16px;
+}
+
+#row-ligne{
+
+    padding-bottom: 10px;
+}
