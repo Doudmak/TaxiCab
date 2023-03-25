@@ -199,7 +199,6 @@ button:hover {
 }
 
 .historique-container {
-    /*background-color: red;*/
     margin-top: 20px;
 }
 
@@ -221,7 +220,28 @@ i {
     margin-right: 5px;
 }
 
+.vp{
+    margin-top: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #row-price {
     margin-top: 10px;
     font-size: 25px;
+}
+
+.reclamation{
+    margin-top: 100px;
+    bottom: 20;
+}
+
+.contact{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reclam {
+    margin-top: 15px;
 }
