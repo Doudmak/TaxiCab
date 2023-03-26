@@ -232,8 +232,9 @@ i {
 }
 
 .reclamation{
-    margin-top: 100px;
+    margin-top: 13%;
     bottom: 20;
+    overflow: visible;
 }
 
 .contact{
