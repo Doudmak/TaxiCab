@@ -20,10 +20,10 @@
         <nav>
             <ul>
                 <li><a href="../index.html" class="menu_hover">Home</a></li>
-                <li><a href="../index.html" class="menu_hover">Informations</a></li>
-                <li><a href="../index.html" class="menu_hover">Client</a></li>
-                <li><a href="../index.html" class="menu_hover">Chauffeur</a></li>
-                <!--<li><a href="../MonCompte/MonCompte.html" class="menu_hover">Mon Compte</a></li>-->
+                <li><a href="../index.html#Information" class="menu_hover">Informations</a></li>
+                <li><a href="../index.html#Client" class="menu_hover">Client</a></li>
+                <li><a href="../index.html#Chauffeur" class="menu_hover">Chauffeur</a></li>
+                <li><a href="../MonCompte/MonCompte.html" class="menu_hover">Mon Compte</a></li>
                 <li><a href="../connexion/connexion2.html"><div class="bx bx-user" class="deroulant" id="user-icon"></div></a></li>
             </ul>
         </nav>
@@ -37,7 +37,7 @@
         <div class="container">
             <div class="left">
                 <div class="infos">
-                    <img src="images/dummy.png" class="img-profile" alt=""> <br>
+                    <img src="images/ppman.png" class="img-profile" alt=""> <br>
                     <img src="images/4,5etoiles.png" alt="" id="etoiles">
                     <p>Nom : George</p>
                     <div class="ligne"></div>
@@ -51,67 +51,95 @@
                 
             </div>
             <div class="right">
-                <div class="historique-container">
-                    <h2 id="histo">Historique</h2> 
-                    <div class="ligne-resa">
-                        <div class="row">
-                            <i class='bx bx-map'></i>
-                            <p>Départ : <b>12 place de la Bastille Paris 75011</b> le <b>17/02/2023 à 11h45</b> </p>
-                        </div>
-                        <div class="row">
-                            <i class='bx bx-navigation'></i>
-                            <p>Arrivée : <b>27 Boulevard Saint Michel Paris 75005</b>  le <b>17/02/2023 à 12h08</b> </p> <br>
-                        </div>
-                        <div class="row" id="row-price">
-                            <i class='bx bxs-credit-card'></i>
-                            <p>Prix : <b>17,50€</b></p>
-                        </div>
+                <div class="recap">
+                    <div class="boites" id="boiteG">
+                        <h1 class = "logo2">Nombre de trajet(s)</h1>
+                        <h1 class="logo2" id="chiffre">4</h1>
                     </div>
-                    <div class="ligne-resa">
-                        <div class="row">
-                            <i class='bx bx-map'></i>
-                            <p>Départ : <b>12 place de la Bastille Paris 75011</b> le <b>17/02/2023 à 11h45</b> </p>
-                        </div>
-                        <div class="row">
-                            <i class='bx bx-navigation'></i>
-                            <p>Arrivée : <b>27 Boulevard Saint Michel Paris 75005</b>  le <b>17/02/2023 à 12h08</b> </p> <br>
-                        </div>
-                        <div class="row" id="row-price">
-                            <i class='bx bxs-credit-card'></i>
-                            <p>Prix : <b>17,50€</b></p>
-                        </div>
+                    <div class="boites" id="mid">
+                        <h1 class = "logo2">Nombre km parcourus</h1>
+                        <h1 class="logo2" id="chiffre">67 Km</h1>
                     </div>
-                    <div class="ligne-resa">
-                        <div class="row">
-                            <i class='bx bx-map'></i>
-                            <p>Départ : <b>12 place de la Bastille Paris 75011</b> le <b>17/02/2023 à 11h45</b> </p>
-                        </div>
-                        <div class="row">
-                            <i class='bx bx-navigation'></i>
-                            <p>Arrivée : <b>27 Boulevard Saint Michel Paris 75005</b>  le <b>17/02/2023 à 12h08</b> </p> <br>
-                        </div>
-                        <div class="row" id="row-price">
-                            <i class='bx bxs-credit-card'></i>
-                            <p>Prix : <b>17,50€</b></p>
-                        </div>
-                        <p class="vp">Voir plus</p>
+                    <div class="boites" id="mid2">
+                        <h1 class = "logo2">Coût total des courses</h1>
+                        <h1 class="logo2" id="chiffre">118.53 €</h1>
                     </div>
-                    <div class="reclamation">
-                        <h2 id="histo">Besoin d'aide ?</h2> 
-                        <p class="reclam">Si vous avez une réclamation ou une question à props de vos trajets, contactez-nous ici : </p>
-                        <div class="contact">
-                            <p>tel : 01 52 68 45 77</p>
-                            <p>ou</p>
-                            <p>contact@taxcab.fr</p>
-                        </div>
+                    <div class="boites" id="boiteD">
+                        <h1 class = "logo2">Points de fidélité</h1>
+                        <h1 class="logo2" id="chiffre">74</h1>
                     </div>
                 </div>
                 
-                <!--historique des courses
-                prix, pt départ, destination, prix
+                <div class="historique-container">
+                    <div class="titre">
+                        <h2 id="histo">Historique</h2> 
+                    </div>
 
-                contacter, reclamation-->
+                    <div class="separation">
+                    </div>
 
+                    <div class="row">
+                        <div class="div_img">
+                            <img src="images/valide.png" alt="" class="valide">
+                        </div>
+                        <div class="adresse">
+                            <div class="dep">
+                                <i class='bx bx-map'></i>
+                                <p>Départ : <b>12 place de la Bastille Paris 75011</b> le <b>17/02/2023 à 11h45</b> </p>
+                            </div>
+                            <div class="dep">
+                                <i class='bx bx-navigation'></i>
+                                <p>Arrivée : <b>27 Boulevard Saint Michel Paris 75005</b>  le <b>17/02/2023 à 12h08</b> </p> <br>
+                            </div>
+                        </div>
+                        <div class="prixFin">
+                            <p>17,50€</p> 
+                        </div>
+                    </div>
+
+                    <div class="separation">
+                    </div>
+
+                    <div class="row">
+                        <div class="div_img">
+                            <img src="images/valide.png" alt="" class="valide">
+                        </div>
+                        <div class="adresse">
+                            <div class="dep">
+                                <i class='bx bx-map'></i>
+                                <p>Départ : <b>12 place de la Bastille Paris 75011</b> le <b>17/02/2023 à 11h45</b> </p>
+                            </div>
+                            <div class="dep">
+                                <i class='bx bx-navigation'></i>
+                                <p>Arrivée : <b>27 Boulevard Saint Michel Paris 75005</b>  le <b>17/02/2023 à 12h08</b> </p> <br>
+                            </div>
+                        </div>
+                        <div class="prixFin">
+                            <p>17,50€</p> 
+                        </div>
+                    </div>
+
+                    <div class="separation">
+                    </div>
+
+                    <div class="row">
+                        <div class="div_img">
+                            <img src="images/attente.png" alt="" class="valide">
+                        </div>
+                        <div class="adresse">
+                            <div class="dep">
+                                <i class='bx bx-map'></i>
+                                <p>Départ : <b>12 place de la Bastille Paris 75011</b> le <b>17/02/2023 à 11h45</b> </p>
+                            </div>
+                            <div class="dep">
+                                <i class='bx bx-navigation'></i>
+                                <p>Arrivée : <b>27 Boulevard Saint Michel Paris 75005</b>  le <b>17/02/2023 à 12h08</b> </p> <br>
+                            </div>
+                        </div>
+                        <div class="prixFin" id="attente">
+                            <p>17,50€</p> 
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
