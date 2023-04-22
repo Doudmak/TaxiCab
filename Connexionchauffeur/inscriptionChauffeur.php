@@ -2,7 +2,7 @@
     require_once 'config.php'; // On inclu la connexion à la bdd
     
     // Si les variables existent et qu'elles ne sont pas vides
-    if(isset($_POST['nomChauffeur']) && isset($_POST['prenomChauffeur']) && isset($_POST['numPermis']) && isset($_POST['dateObtentionPermis']) && isset($_POST['adresseChauffeur'])  && isset($_POST['numeroImmatriculation']) && isset($_POST['villeChauffeur']) && isset($_POST['cpChauffeur']) && isset($_POST['mailChauffeur'])&& isset($_POST['mdpChauffeur'])) {
+    if(!empty($_POST['nomChauffeur']) && !empty($_POST['prenomChauffeur']) && !empty($_POST['numPermis']) && !empty($_POST['dateObtentionPermis']) && !empty($_POST['adresseChauffeur'])  && !empty($_POST['numeroImmatriculation']) && !empty($_POST['villeChauffeur']) && !empty($_POST['cpChauffeur']) && !empty($_POST['mailChauffeur'])&& !empty($_POST['mdpChauffeur'])) {
         // Patch XSS
         $nom = htmlspecialchars($_POST['nomChauffeur']);
         $prenom = htmlspecialchars($_POST['prenomChauffeur']);
@@ -49,13 +49,13 @@
                                         // On redirige avec le message de succès
                                         header('Location:chauffeur.html?reg_err=success');
                                         die();
-                                    } else { header('Location: connexion2.html?reg_err=ville'); die();}
-                                } else { header('Location: connexion2.html?reg_err=prenom'); die();}
-                            } else { header('Location: connexion2.html?reg_err=prenom_length'); die();}
-                        } else { header('Location: connexion2.html?reg_err=nom_length'); die();}
-                    } else { header('Location: connexion2.html?reg_err=already'); die();}
-                }  else { header('Location: connexion2.html?reg_err=ville'); die();} 
-            }else { header('Location: connexion2.html?reg_err=ville'); die();}
+                                    } else { header('Location: chauffeur.html?reg_err=ville'); die();}
+                                } else { header('Location: chauffeur.html?reg_err=prenom'); die();}
+                            } else { header('Location: chauffeur.html?reg_err=prenom_length'); die();}
+                        } else { header('Location: chauffeur.html?reg_err=nom_length'); die();}
+                    } else { header('Location: chauffeur.html?reg_err=already'); die();}
+                }  else { header('Location: chauffeur.html?reg_err=ville'); die();} 
+            }else { header('Location: chauffeur.html?reg_err=ville'); die();}
         }
-    }
+    } else { header('Location: chauffeur.html?reg_err=champs_incomplets'); die();}
 ?> 
