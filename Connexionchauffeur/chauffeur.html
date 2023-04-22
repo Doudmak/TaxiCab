@@ -36,35 +36,34 @@
                     <div class='bx bx-chevrons-left flecheRetour'></div>
                     <a href="chauffeur.html"><p class="retour">Retour</p></a>
                 </div>
-                <form action="#">
+                <form action="inscriptionChauffeur.php" method="post">
                     <h1 id="inscription">Inscription</h1>
                     
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Nom" class="np insc" required> 
-                        <input type="text" placeholder="Prenom" class="np insc" required>
+                        <input type="text" placeholder="Nom" class="np insc" required name="nomChauffeur" id="nomChauffeur"> 
+                        <input type="text" placeholder="Prenom" class="np insc" required name="prenomChauffeur" id="prenomChauffeur">
                     </div>
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Numéro de permis de conduire" class="np insc">
-                        <input type="text" placeholder="Date d'obtention du permis" class="np insc">
+                        <input type="text" placeholder="Numéro de permis de conduire" class="np insc" name="numPermis" id="numPermis">
+                        <input type="text" placeholder="Date d'obtention du permis" class="np insc" name="dateObtentionPermis" id="dateObtentionPermis">
                     </div>
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Adresse" class="np insc">
-                        <input type="text" placeholder="Numéro d'immatriculation" class="np insc">
+                        <input type="text" placeholder="Adresse" class="np insc" name="adresseChauffeur" id="adresseChauffeur">
+                        <input type="text" placeholder="Numéro d'immatriculation" class="np insc" name="numeroImmatriculation" id="numeroImmatriculation">
                     </div>
                     
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Ville" class="np insc">
-                        <input type="text" placeholder="Code Postal" class="np insc">
+                        <input type="text" placeholder="Ville" class="np insc" name="villeChauffeur" id="villeChauffeur">
+                        <input type="text" placeholder="Code Postal" class="np insc" name="cpChauffeur" id="cpChauffeur">
                     </div>
                     <div class="nom-prenom">
-                        <input type="email" placeholder="Identifiant (mail)" class="np insc" required>
-                        <input type="password" placeholder="Mot de passe" class="np insc" required>
+                        <input type="email" placeholder="Identifiant (mail)" class="np insc" required name="mailChauffeur" id="mailChauffeur">
+                        <input type="password" placeholder="Mot de passe" class="np insc" required name="mdpChauffeur" id="mdpChauffeur">
                     </div>
                     
                     <div class="bas">
-                        <button>Créer le compte</button>
+                        <button type="submit">Créer le compte</button>
                     </div>
-                    
                 </form>
             </div>
         </div>

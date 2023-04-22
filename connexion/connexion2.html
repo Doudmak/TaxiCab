@@ -32,22 +32,20 @@
      <div class="container">
         <div id="formulaire1">
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form action="inscription.php" method="post">
                     <h1 id="inscription">Inscription</h1>
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Nom" class="np" required> 
-                        <input type="text" placeholder="Prenom" class="np" required>
+                        <input type="text" placeholder="Nom" class="np" required id="nom" name ="nom"> 
+                        <input type="text" placeholder="Prenom" class="np" required id="prenom" name="prenom">
                     </div>
-                    
-                    
-                    <input type="text" placeholder="Adresse">
+                    <input type="text" placeholder="Numero rue et nom rue" required id="adresse" name ="adresse"> 
                     <div class="nom-prenom">
-                        <input type="text" placeholder="Ville" class="np">
-                        <input type="text" placeholder="Code Postal" class="np">
+                        <input type="text" placeholder="Ville" class="np" id="ville" name="ville">
+                        <input type="text" placeholder="Code Postal" class="np" id="cp" name ="cp">
                     </div>
-                    <input type="email" placeholder="Identifiant (mail)" required>
-                    <input type="password" placeholder="Mot de passe" required>
-                    <button>Créer le compte</button>
+                    <input type="email" placeholder="Identifiant (mail)" required id="mail" name="mail">
+                    <input type="password" placeholder="Mot de passe" required id="mdp" name="mdp">
+                    <button type="submit">Créer le compte</button>
                 </form>
             </div>
             <div class="overlay-panel overlay-left">
