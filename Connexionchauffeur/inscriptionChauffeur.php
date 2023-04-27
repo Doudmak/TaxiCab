@@ -14,6 +14,7 @@
         $cp = htmlspecialchars($_POST['cpChauffeur']);
         $mail = htmlspecialchars($_POST['mailChauffeur']);
         $mdp = htmlspecialchars($_POST['mdpChauffeur']);
+        $mdp = hash('sha256',$mdp);
     
 
         // On vérifie si l'utilisateur existe
@@ -33,7 +34,7 @@
                                 if(strlen($mail) <= 100){
                                     if(strlen($mdp) <= 100){ // On verifie que la longueur du mail <= 100
                                       // On insère dans la base de données
-                                        $insert = $bdd->prepare('INSERT INTO conducteur(nom, prenom, numPermis, dateObtention, adresse, numImmat, ville, codeP, mdp, mail) VALUES(:nom, :prenom, :numPermis, :dateObt, :adress, :numImmat, :ville, :cp, :mail, :mdp)');
+                                        $insert = $bdd->prepare('INSERT INTO conducteur(nom, prenom, numPermis, dateObtention, adresse, numImmat, ville, codeP, mdp, mail) VALUES(:nom, :prenom, :numPermis, :dateObt, :adress, :numImmat, :ville, :cp, :mdp, :mail)');
                                         $insert->execute(array(
                                             'nom' => $nom,
                                             'prenom' => $prenom,

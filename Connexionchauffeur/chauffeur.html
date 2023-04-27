@@ -70,7 +70,7 @@
         
         <div id="formulaire2">
             <div class="form-container log-in-container">
-                <form action="#">
+                <form action="connexionChauffeur.php" method="post">
                     <h1 id="inscription">Se connecter</h1>
                     <div class="social-container">
                         <a href="https://www.instagram.com" target="_blank" class="icons"><div class="bx bxl-instagram" id="icons"></div></a>
@@ -79,9 +79,10 @@
                         
                     </div>
                     
-                    <input type="email" placeholder="Identifiant (mail)" >
-                    <input type="password" placeholder="Mot de passe" > 
-                    <button>Connexion</button>
+                    <input type="email" placeholder="Identifiant (mail)" name="mailcoch" id="mailcoch">
+                    <input type="password" placeholder="Mot de passe" name="mdpcoch" id="mdpcoch"> 
+                    <button type="submit">Connexion</button>
+                    
                 </form>
             </div>    
             <div class="overlay-panel overlay-right">
