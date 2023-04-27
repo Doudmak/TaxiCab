@@ -2,9 +2,8 @@
     require_once 'config.php'; // On inclu la connexion à la bdd
     
     // Si les variables existent et qu'elles ne sont pas vides
-    if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['adresse']) && isset($_POST['ville']) && isset($_POST['cp'])  && isset($_POST['mail']) && isset($_POST['mdp'])) {
+    if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['adresse']) && !empty($_POST['ville']) && !empty($_POST['cp'])  && !empty($_POST['mail']) && !empty($_POST['mdp'])) {
         // Patch XSS
-        echo(30);
 
         $nom = htmlspecialchars($_POST['nom']);
         $prenom = htmlspecialchars($_POST['prenom']);
@@ -13,7 +12,7 @@
         $cp= htmlspecialchars($_POST['cp']);
         $mail = htmlspecialchars($_POST['mail']);
         $mdp = htmlspecialchars($_POST['mdp']);
-        echo(31);
+        $mdp = hash('sha256', $mdp);
 
         // On vérifie si l'utilisateur existe
         $check = $bdd->prepare('SELECT nom, prenom, adresse, ville, codePostal, mail, mdp FROM user WHERE mail = ?');
@@ -45,12 +44,36 @@
                                     // On redirige avec le message de succès
                                     header('Location:connexion2.html?reg_err=success');
                                     die();
-                                } else { header('Location: connexion2.html?reg_err=ville'); die();}
-                            } else { header('Location: connexion2.html?reg_err=prenom'); die();}
-                        } else { header('Location: connexion2.html?reg_err=prenom_length'); die();}
-                    } else { header('Location: connexion2.html?reg_err=nom_length'); die();}
-                } else { header('Location: connexion2.html?reg_err=already'); die();}
+                                } else { 
+                                    $erreur = "Le champs mot de passe n'est pas valide";
+                                    header('Location: connexion2.html?reg_err=ville'); die();
+                                }
+                            } else { 
+                                $erreur = "Le champs mail n'est pas valide";
+                                header('Location: connexion2.html?reg_err=prenom'); die();
+                            }
+                        } else { 
+                            $erreur = "Le champs ville n'est pas valide";
+                            header('Location: connexion2.html?reg_err=prenom_length'); die();
+                        }
+                    } else { 
+                        $erreur = "Le champs adresse n'est pas valide";
+                        header('Location: connexion2.html?reg_err=nom_length'); die();
+                    }
+                } else { 
+                    $erreur = "Le champs prénom n'est pas valide";
+                    header('Location: connexion2.html?reg_err=already'); die();
+                }
+            } else { 
+                $erreur = "Le champs nom n'est pas valide";
+                header('Location: connexion2.html?reg_err=already'); die();
             }
-        }  
+        } else { 
+            $erreur = "Vous n'avez pas encore de compte veuillez vous inscrire";
+            header('Location: connexion2.html?reg_err=already'); die();
+        }
+    } else { 
+        $erreur = "Veuillez remplir tous les champs";
+        header('Location: connexion2.html?reg_err=already'); die();
     }
 ?> 
