@@ -22,17 +22,17 @@
                 $password = hash('sha256', $password);
                 if($data['mdp'] === $password) {
                     $_SESSION['user'] = $data['mail'];
-                    header('Location:chauffeur.html?reg_err=success');
+                    header('Location:chauffeurMain.php?reg_err=success');
                 }else{ 
                     $erreur = "Le champs nom n'est pas valide";
-                    header('Location: chauffeur.html?login_err=password'); die(); }
+                    header('Location: chauffeurMain.php?login_err=password'); die(); }
             } else {
                 $erreur = "Le champs nom n'est pas valide";
-                header('Location:chauffeur.html?login_err=email');}
+                header('Location:chauffeurMain.php?login_err=email');}
         }else{ 
             $erreur = "Le champs nom n'est pas valide";
-            header('Location: chauffeur.html?login_err=already'); die(); }
+            header('Location: chauffeurMain.php?login_err=already'); die(); }
     }else{ 
         $erreur = "Veuillez replir tous les champs";
-        header('Location:chauffeur.html?login_err=empty'); die(); }
+        header('Location:chauffeurMain.php?login_err=empty'); die(); }
 ?>

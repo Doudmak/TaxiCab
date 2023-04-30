@@ -48,15 +48,15 @@
                                             'mdp' => $mdp,
                                         ));
                                         // On redirige avec le message de succès
-                                        header('Location:chauffeur.html?reg_err=success');
+                                        header('Location:chauffeurMain2.php?reg_err=success');
                                         die();
-                                    } else { header('Location: chauffeur.html?reg_err=ville'); die();}
-                                } else { header('Location: chauffeur.html?reg_err=prenom'); die();}
-                            } else { header('Location: chauffeur.html?reg_err=prenom_length'); die();}
-                        } else { header('Location: chauffeur.html?reg_err=nom_length'); die();}
-                    } else { header('Location: chauffeur.html?reg_err=already'); die();}
-                }  else { header('Location: chauffeur.html?reg_err=ville'); die();} 
-            }else { header('Location: chauffeur.html?reg_err=ville'); die();}
-        }
-    } else { header('Location: chauffeur.html?reg_err=champs_incomplets'); die();}
+                                    } else { header('Location: chauffeurMain2.php?reg_err=mdp'); die();}
+                                } else { header('Location: chauffeurMain2.php?reg_err=mail'); die();}
+                            } else { header('Location: chauffeurMain2.php?reg_err=ville'); die();}
+                        } else { header('Location: chauffeurMain2.php?reg_err=dateObt'); die();}
+                    } else { header('Location: chauffeurMain2.php?reg_err=adresse'); die();}
+                }  else { header('Location: chauffeurMain2.php?reg_err=prenom'); die();} 
+            }else { header('Location: chauffeurMain2.php?reg_err=nom'); die();}
+        } else { header('Location: chauffeurMain2.php?reg_err=exist'); die();}
+    } else { header('Location: chauffeurMain2.php?reg_err=champs_incomplets'); die();}
 ?> 

@@ -42,38 +42,38 @@
                                         'mdp' => $mdp,
                                     ));
                                     // On redirige avec le message de succès
-                                    header('Location:connexion2.html?reg_err=success');
+                                    header('Location:inscriptionMain.php?reg_err=success');
                                     die();
                                 } else { 
                                     $erreur = "Le champs mot de passe n'est pas valide";
-                                    header('Location: connexion2.html?reg_err=ville'); die();
+                                    header('Location: inscriptionMain.php?reg_err=mdp'); die();
                                 }
                             } else { 
                                 $erreur = "Le champs mail n'est pas valide";
-                                header('Location: connexion2.html?reg_err=prenom'); die();
+                                header('Location: inscriptionMain.php?reg_err=email'); die();
                             }
                         } else { 
                             $erreur = "Le champs ville n'est pas valide";
-                            header('Location: connexion2.html?reg_err=prenom_length'); die();
+                            header('Location: inscriptionMain.php?reg_err=ville_length'); die();
                         }
                     } else { 
                         $erreur = "Le champs adresse n'est pas valide";
-                        header('Location: connexion2.html?reg_err=nom_length'); die();
+                        header('Location: inscriptionMain.php?reg_err=adr_length'); die();
                     }
                 } else { 
                     $erreur = "Le champs prénom n'est pas valide";
-                    header('Location: connexion2.html?reg_err=already'); die();
+                    header('Location: inscriptionMain.php?reg_err=prenom_invalide'); die();
                 }
             } else { 
                 $erreur = "Le champs nom n'est pas valide";
-                header('Location: connexion2.html?reg_err=already'); die();
+                header('Location: inscriptionMain.php?reg_err=nom_invalide'); die();
             }
         } else { 
             $erreur = "Vous n'avez pas encore de compte veuillez vous inscrire";
-            header('Location: connexion2.html?reg_err=already'); die();
+            header('Location: inscriptionMain.php?reg_err=already_registered'); die();
         }
     } else { 
         $erreur = "Veuillez remplir tous les champs";
-        header('Location: connexion2.html?reg_err=already'); die();
+        header('Location: inscriptionMain.php?reg_err=empty'); die();
     }
 ?> 

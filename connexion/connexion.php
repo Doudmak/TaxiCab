@@ -22,7 +22,7 @@
                 $password = hash('sha256', $password);
                 if($data['mdp'] === $password) {
                     $_SESSION['user'] = $data['mail'];
-                    header('Location:../recherche.html?reg_err=success');
+                    header('Location:connexionMain.php?login_err=success');
                 }else{ 
                     header('Location: connexionMain.php?login_err=password'); die(); }
             } else {
