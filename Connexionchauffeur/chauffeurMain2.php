@@ -24,7 +24,7 @@
                 <li><a href="../index.html#Information" class="menu_hover">Informations</a></li>
                 <li><a href="../index.html#Client" class="menu_hover">Client</a></li>
                 <li><a href="../index.html#Chauffeur" class="menu_hover">Chauffeur</a></li>
-                <li><a href="../MonCompte/MonCompte.html" class="menu_hover">Mon Compte</a></li>
+                <li><a href="../MonCompte/MonCompte.php" class="menu_hover">Mon Compte</a></li>
                 <li><a href="../connexion/connexionMain.php"><div class="bx bx-user" id="user-icon"></div></a></li>
             </ul>
         </nav>

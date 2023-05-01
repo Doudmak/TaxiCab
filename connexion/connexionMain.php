@@ -20,11 +20,11 @@
          <div class="bx bx-menu" id="menu-icon"></div>
          <nav>
              <ul>
-                 <li><a href="../index.html#Home" class="menu_hover">Home</a></li>
-                 <li><a href="../index.html#Information" class="menu_hover">Informations</a></li>
-                 <li><a href="../index.html#Client" class="menu_hover">Client</a></li>
-                 <li><a href="../index.html#Chauffeur" class="menu_hover">Chauffeur</a></li>
-                 <li><a href="../MonCompte/MonCompte.html" class="menu_hover">Mon Compte</a></li>
+                 <li><a href="../index.php#Home" class="menu_hover">Home</a></li>
+                 <li><a href="../index.php#Information" class="menu_hover">Informations</a></li>
+                 <li><a href="../index.php#Client" class="menu_hover">Client</a></li>
+                 <li><a href="../index.php#Chauffeur" class="menu_hover">Chauffeur</a></li>
+                 <li><a href="../MonCompte/MonCompte.php" class="menu_hover">Mon Compte</a></li>
                  <li><a href=""><div class="bx bx-user" id="user-icon"></div></a></li>
              </ul>
          </nav>
@@ -42,7 +42,7 @@
                     
                     <input type="email" placeholder="Identifiant (mail)"  id="mailco" name="mailco">
                     <input type="password" placeholder="Mot de passe"  id="mdpco" name="mdpco"> 
-                    <a href="../Connexionchauffeur/chauffeurMain.php" class="connexionChauffeur"><p>Vous êtes chauffeur ?</p></a>
+                    <p><a href="../Connexionchauffeur/chauffeurMain.php" class="connexionChauffeur">Vous êtes chauffeur ?</a></p>
                     <button type="submit">Connexion</button>
                     <?php
                     if(isset($_GET['login_err'])){
@@ -76,6 +76,7 @@
                                 </div>
                                 <?php
                             break;
+                            
                         }
                     }
                     ?>

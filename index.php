@@ -23,8 +23,8 @@
                 <li><a href="#Information" class="menu_hover">Informations</a></li>
                 <li><a href="#Client" class="menu_hover">Client</a></li>
                 <li><a href="#Chauffeur" class="menu_hover">Chauffeur</a></li>
-                <li><a href="MonCompte/MonCompte.html" class="menu_hover">Mon compte</a></li>
-                <li><a href="connexion/connexion2.html"><div class="bx bx-user" id="user-icon"></div></a></li>
+                <li><a href="MonCompte/MonCompte.php" class="menu_hover">Mon compte</a></li>
+                <li><a href="connexion/connexionMain.php"><div class="bx bx-user" id="user-icon"></div></a></li>
             </ul>
         </nav>
     </header>
