@@ -48,7 +48,15 @@ require_once 'config.php';
         <div class="container">
             <div class="left">
                 <div class="infos">
-                    <img src="images/ppman.png" class="img-profile" alt=""> <br>
+                <?php 
+                            if(isset($_SESSION['user'])) { ?>
+                                <img src="images/ppman.png" class="img-profile" alt=""> <br> <?php
+                            } else {
+                                ?>
+                                <img src="images/dummy.png" class="img-profile" alt=""> <br> 
+                                <?php
+                            }
+                ?>
                     <?php 
                             if(isset($_SESSION['user'])) { ?>
                                 <img src="images/4,5etoiles.png" alt="" id="etoiles">
