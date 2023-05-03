@@ -29,7 +29,7 @@ require_once 'config.php';
                 <li><a href="../MonCompte/MonCompte.php" class="menu_hover">Mon Compte</a></li>
                 <?php 
                             if(isset($_SESSION['user'])) { ?>
-                                <li><form action="deconnexion.php"><button type="submit"><div class="bx bx-power-off" class="deroulant" id="user-icon"></div></button></form></li> <?php
+                                <li><form action="deconnexion.php"><button type="submit" class="deco"><div class="bx bx-power-off" class="deroulant" id="user-icon"></div></button></form></li> <?php
                             } else {
                                 ?>
                                 <li><a href="../connexion/connexionMain.php"><div class="bx bx-user" class="deroulant" id="user-icon"></div></a></li>
@@ -49,7 +49,12 @@ require_once 'config.php';
             <div class="left">
                 <div class="infos">
                     <img src="images/ppman.png" class="img-profile" alt=""> <br>
-                    <img src="images/4,5etoiles.png" alt="" id="etoiles">
+                    <?php 
+                            if(isset($_SESSION['user'])) { ?>
+                                <img src="images/4,5etoiles.png" alt="" id="etoiles">
+                            <?php }
+                            ?>
+                    
                     <p>Nom : <?php 
                             if(isset($_SESSION['user'])) {
                                 echo $_SESSION['user']["prenom"];
@@ -88,7 +93,7 @@ require_once 'config.php';
                                 echo "";
                             }
                             ?></p>
-                    <button class="ghost">Modifier les informations</button>
+                    <button class="modifInfo">Modifier les informations</button>
                 </div>
                 
             </div>
@@ -106,7 +111,7 @@ require_once 'config.php';
                         <h1 class = "logo2">Nombre km parcourus</h1>
                         <h1 class="logo2" id="chiffre"><?php
                         if(isset($_SESSION['user'])) {
-                                echo $_SESSION['user']["km"];
+                                echo $_SESSION['user']["km"]."km";
                             } else {
                                 echo "";
                             } ?>
@@ -116,7 +121,7 @@ require_once 'config.php';
                         <h1 class = "logo2">Coût total des courses</h1>
                         <h1 class="logo2" id="chiffre"><?php
                         if(isset($_SESSION['user'])) {
-                                echo $_SESSION['user']["total"];
+                                echo $_SESSION['user']["total"]."€";
                             } else {
                                 echo "";
                             } ?></h1>
@@ -125,7 +130,7 @@ require_once 'config.php';
                         <h1 class = "logo2">Points de fidélité</h1>
                         <h1 class="logo2" id="chiffre"><?php
                         if(isset($_SESSION['user'])) {
-                                echo (int)($_SESSION['user']["km"]/7);
+                                echo (int)($_SESSION['user']["km"]/7)." Pts";
                             } else {
                                 echo "";
                             } 

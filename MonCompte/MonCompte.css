@@ -182,7 +182,16 @@ section {
     margin-bottom: 60px;
 }
 
-button{
+.deco{
+    background-color: transparent ;
+    color: #00203f;
+    border: none;
+    font-size: 16px;
+    padding : 5px 10px 5px 10px;
+    border-radius: 50px;
+}
+
+.modifInfo{
     background-color: transparent ;
     color: #00203f;
     border: none;
@@ -192,7 +201,7 @@ button{
     box-shadow: #505254 3px 3px 5px;
 }
 
-button:hover {
+.modifInfo:hover {
     cursor: pointer;
     box-shadow: rgb(59, 60, 61) 3px 3px 6px 0px inset
 }

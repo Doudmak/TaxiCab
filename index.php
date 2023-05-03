@@ -13,6 +13,10 @@
     <title>TaxCAB</title>
 </head>
 <body>
+<?php 
+session_start();
+require_once 'config.php';
+?>
 
     <header>
        <h1><a href ="index.html" class = "logo">TaxCAB</a></h1>
@@ -24,7 +28,15 @@
                 <li><a href="#Client" class="menu_hover">Client</a></li>
                 <li><a href="#Chauffeur" class="menu_hover">Chauffeur</a></li>
                 <li><a href="MonCompte/MonCompte.php" class="menu_hover">Mon compte</a></li>
-                <li><a href="connexion/connexionMain.php"><div class="bx bx-user" id="user-icon"></div></a></li>
+                <?php 
+                            if(isset($_SESSION['user'])) { ?>
+                                <li><form action="deconnexion.php"><button type="submit" class="deco"><div class="bx bx-power-off" class="deroulant" id="user-icon"></div></button></form></li> <?php
+                            } else {
+                                ?>
+                                <li><a href="connexion/connexionMain.php"><div class="bx bx-user" class="deroulant" id="user-icon"></div></a></li>
+                                <?php
+                            }
+                ?>
             </ul>
         </nav>
     </header>

@@ -437,3 +437,12 @@ section {
 
     padding-bottom: 10px;
 }
+
+.deco{
+    background-color: transparent ;
+    color: #00203f;
+    border: none;
+    font-size: 16px;
+    padding : 5px 10px 5px 10px;
+    border-radius: 50px;
+}
