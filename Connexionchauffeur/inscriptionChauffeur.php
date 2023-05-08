@@ -14,6 +14,7 @@
         $cp = htmlspecialchars($_POST['cpChauffeur']);
         $mail = htmlspecialchars($_POST['mailChauffeur']);
         $mdp = htmlspecialchars($_POST['mdpChauffeur']);
+        $vehicule = htmlspecialchars($_POST['vehicule']);
         $mdp = hash('sha256',$mdp);
     
 
@@ -34,7 +35,7 @@
                                 if(strlen($mail) <= 100){
                                     if(strlen($mdp) <= 100){ // On verifie que la longueur du mail <= 100
                                       // On insère dans la base de données
-                                        $insert = $bdd->prepare('INSERT INTO conducteur(nom, prenom, numPermis, dateObtention, adresse, numImmat, ville, codeP, mdp, mail) VALUES(:nom, :prenom, :numPermis, :dateObt, :adress, :numImmat, :ville, :cp, :mdp, :mail)');
+                                        $insert = $bdd->prepare('INSERT INTO conducteur(nom, prenom, numPermis, dateObtention, adresse, numImmat, ville, codeP, mdp, mail, duree, nb_trajet, vehicule) VALUES(:nom, :prenom, :numPermis, :dateObt, :adress, :numImmat, :ville, :cp, :mdp, :mail, 0, 0, :vehicule)');
                                         $insert->execute(array(
                                             'nom' => $nom,
                                             'prenom' => $prenom,
@@ -46,6 +47,7 @@
                                             'cp' => $cp,
                                             'mail' => $mail,
                                             'mdp' => $mdp,
+                                            'vehicule' => $vehicule,
                                         ));
                                         // On redirige avec le message de succès
                                         header('Location:chauffeurMain2.php?reg_err=success');

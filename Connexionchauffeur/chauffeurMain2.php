@@ -60,6 +60,9 @@
                         <input type="email" placeholder="Identifiant (mail)" class="np insc"  name="mailChauffeur" id="mailChauffeur">
                         <input type="password" placeholder="Mot de passe" class="np insc"  name="mdpChauffeur" id="mdpChauffeur">
                     </div>
+                    <div class="nom-prenom">
+                        <input type="text" placeholder="Véhicule" class="np insc" name="vehicule" id="vehicule">
+                    </div>
                     <?php
                     if(isset($_GET['reg_err'])){
                     $erreur = htmlspecialchars($_GET['reg_err']);
@@ -124,7 +127,7 @@
                         case 'champs_incomplets' : 
                             ?>
                             <div>
-                                <p style="margin-bottom : 0px"> Compe déjà existant, veuillez-vous connecter</p>
+                                <p style="margin-bottom : 0px"> Veuillez remplir tous les champs</p>
                             </div>
                             <?php
                         break;

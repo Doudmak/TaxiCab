@@ -108,12 +108,12 @@ nav ul li a{
 }
 
 .container{
-    margin-top: 50px;
+    margin-top: 40px;
     position: relative;
     overflow: hidden;
     background-color: #FFF;
     width: 60%;
-    height: 60%;
+    height: 70%;
     min-height: 500px;
     border-radius: 32px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -146,6 +146,10 @@ input.np{
     width: 49%;
 }
 
+input.vehicule{
+    width: 100%;
+}
+
 #inscription{
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
@@ -153,7 +157,7 @@ input.np{
     font-size: 35px;
     color: #00203f;
     margin-bottom: 70x;
-    margin-top: -30px;
+    margin-top: -50px;
 }
 
 form{
@@ -312,4 +316,8 @@ h1.accroche{
 
 .form2-container {
     margin-top: 60px;
+}
+
+#vehicule{
+    width: 100%;
 }
