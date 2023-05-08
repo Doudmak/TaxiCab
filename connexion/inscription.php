@@ -45,7 +45,7 @@
                                     header('Location:inscriptionMain.php?reg_err=success');
                                     die();
                                 } else { 
-                                    $erreur = "Le champs mot de passe n'est pas valide";
+                                    
                                     header('Location: inscriptionMain.php?reg_err=mdp'); die();
                                 }
                             } else { 

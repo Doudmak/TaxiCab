@@ -18,7 +18,7 @@ session_start();
 require_once 'config.php';
 ?>
     <header>
-       <h1><a href ="index.html" class = "logo">TaxCAB</a></h1>
+       <h1><a href ="../index.php" class = "logo">TaxCAB</a></h1>
         <div class="bx bx-menu" id="menu-icon"></div>
         <nav>
             <ul>

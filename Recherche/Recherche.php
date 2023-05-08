@@ -101,6 +101,12 @@
 
     $mail = $_SESSION['user']["mail"];
 
+    $sql3 = "SELECT MAX(num_trajet) AS max_valeu FROM trajet where mail = ?";
+        $stmt2 = $bdd->prepare($sql3);
+        $stmt2->execute([$mail]);
+        $res2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+        $max_valeur = $res2['max_valeu'];
+
 
     // Préparer la requête SQL
     $sql = "INSERT INTO trajet (adressedep, villedep, codepdep, adressearr, villear, codeparr, prix, num_trajet, mail, km) VALUES (:rueDep, :villeDep, :codePostalDep, :rueArr, :villeArr, :codePostalArr, :prix, :num_trajet, :mail, :distance)";
@@ -115,7 +121,7 @@
         'villeArr' => $villeArr,
         'codePostalArr' => $codePostalArr,
         'prix' => $prix,
-        'num_trajet' => $num_trajet,
+        'num_trajet' => $max_valeur+1,
         'mail' => $mail,
         'distance' => $distance
 

@@ -16,14 +16,14 @@
 <body>
 
     <header>
-       <h1><a href ="../index.html" class = "logo">TaxCAB</a></h1>
+       <h1><a href ="../index.php" class = "logo">TaxCAB</a></h1>
         <div class="bx bx-menu" id="menu-icon"></div>
         <nav>
             <ul>
-                <li><a href="../index.html" class="menu_hover">Home</a></li>
-                <li><a href="../index.html#Information" class="menu_hover">Informations</a></li>
-                <li><a href="../index.html#Client" class="menu_hover">Client</a></li>
-                <li><a href="../index.html#Chauffeur" class="menu_hover">Chauffeur</a></li>
+                <li><a href="../index.php" class="menu_hover">Home</a></li>
+                <li><a href="../index.php#Information" class="menu_hover">Informations</a></li>
+                <li><a href="../index.php#Client" class="menu_hover">Client</a></li>
+                <li><a href="../index.php#Chauffeur" class="menu_hover">Chauffeur</a></li>
                 <li><a href="../MonCompte/MonCompte.php" class="menu_hover">Mon Compte</a></li>
                 <li><a href="../connexion/connexionMain.php"><div class="bx bx-user" id="user-icon"></div></a></li>
             </ul>
