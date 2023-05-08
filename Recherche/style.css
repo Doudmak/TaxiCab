@@ -46,10 +46,15 @@ header{
     color:  var(--text-color);
 }
 
-.bxs-user-account{
+form .deco .bxs-user-account{
 
     font-size: 38px;
     padding-right: 25px;
+}
+
+.bx-power-off{
+
+    font-size: 35px;
 }
 
 .container-search{

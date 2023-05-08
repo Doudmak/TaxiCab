@@ -172,6 +172,12 @@ section {
 
 }
 
+
+.selected{
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
 #fleche{
     display: flex;
     align-items: center;
@@ -317,6 +323,11 @@ section {
 
     text-align: center;
     font-family: calibri;
+}
+
+#ui-id-1, #ui-id-2{
+
+    z-index: 1010;    
 }
 
 /*           CLIENT          */

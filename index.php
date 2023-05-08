@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https : //fonts.googleapis.com/css2?family= Paytone+One & family =Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800 & display= swap" rel="feuille de style">
+    <link href="https://fonts.googleapis.com/css2?family= Paytone+One & family =Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800 & display= swap" rel="feuille de style">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>TaxCAB</title>
 </head>
 <body>
-<?php 
-session_start();
-require_once 'config.php';
-?>
+    <?php 
+        session_start();
+        require_once 'config.php';
+    ?>
 
-    <header>
+
+    <header id="header">
        <h1><a href ="index.html" class = "logo">TaxCAB</a></h1>
         <div class="bx bx-menu" id="menu-icon"></div>
         <nav>
@@ -29,63 +32,91 @@ require_once 'config.php';
                 <li><a href="#Chauffeur" class="menu_hover">Chauffeur</a></li>
                 <li><a href="MonCompte/MonCompte.php" class="menu_hover">Mon compte</a></li>
                 <?php 
-                            if(isset($_SESSION['user'])) { ?>
-                                <li><form action="deconnexion.php"><button type="submit" class="deco"><div class="bx bx-power-off" class="deroulant" id="user-icon"></div></button></form></li> <?php
-                            } else {
-                                ?>
-                                <li><a href="connexion/connexionMain.php"><div class="bx bx-user" class="deroulant" id="user-icon"></div></a></li>
-                                <?php
-                            }
+                    if(isset($_SESSION['user'])) { ?>
+                        <li><form action="deconnexion.php"><button type="submit" class="deco"><div class="bx bx-power-off" class="deroulant" id="user-icon"></div></button></form></li> <?php
+                    } else {
+                        ?>
+                        <li><a href="connexion/connexionMain.php"><div class="bx bx-user" class="deroulant" id="user-icon"></div></a></li>
+                        <?php
+                    }
                 ?>
             </ul>
         </nav>
     </header>
 
-    <section class="Home" id="Home">
-        
-        <div class="box-travel">
-            <div class="box-travel-div-title">
-                <h2>Ou allons-nous ?</h2>
-            </div>
-            <div class="box-travel-div">
-                <div class="box-travel-div-p">
-                    <h3>Votre position</h3>
-                    <input type="text" name="position">
-                </div>
-                <div class=" bx bx-shuffle" id="fleche"></div>
-                <div class="box-travel-div-p">
-                    <h3>Votre destination</h3>
-                    <input type="text" name="position">
-                </div>
-            </div>
-            <div class="div-type">
-                <div class="type-vehicule">
-                    <div class="type-vehicule-title">
-                        <h3>Type de véhicule</h3>
-                    </div>
-                    <div class="type-vehicule-image">
-                        <div class="bx bxs-car icon" id ="icon-car"></div>
-                        <div class="bx bxs-truck icon" id ="icon-truck"></div>
-                    </div>
-                </div>
-                <div class="type-vehicule">
-                    <div class="type-vehicule-title">
-                        <h3>Type de Chauffeur</h3>
-                    </div>
-                    <div class="type-vehicule-image">
-                        <div class="bx bx-female icon" id ="icon-female"></div>
-                        <div class="bx bx-male icon" id ="icon-male"></div>
-                    </div>
-                </div>
-            </div>
-                <div class="flex">
-                    <button class="button-go" type="button"><p>On y va !</p></button>
-                </div>
-        </div>
+    <script type="text/javascript" src="script.js"></script>
 
+    <section class="Home" id="Home">
+        <form method="POST" action="Recherche/Recherche.php">  
+            <div class="box-travel">
+                <div class="box-travel-div-title">
+                    <h2>Où allons-nous ?</h2>
+                </div>
+                <div class="box-travel-div">
+                    <div class="box-travel-div-p">
+                        <h3>Votre position</h3>
+                        <input type="text" name="address-input" id="address-input" autocomplete="off" onclick="autoComplete()">
+                    </div>
+                    <div class=" bx bx-shuffle" id="fleche"></div>
+                    <div class="box-travel-div-p">
+                        <h3>Votre destination</h3>
+                        <input type="text"  name="address-input-1" id="address-input-1" autocomplete="off" onclick="autoComplete1()">
+                    </div>
+                </div>
+                <div class="div-type">
+                    <div class="type-vehicule">
+                        <div class="type-vehicule-title">
+                            <h3>Type de véhicule</h3>
+                        </div>
+                        <div class="type-vehicule-image">
+                            <label for="car-radio">
+                                <div class="bx bxs-car icon" id="icon-car"></div>
+                            </label>
+                            <input type="radio" id="car-radio" name="type-vehicule" value="car" onclick="selectType('type-vehicule', this)">
+                            <label for="truck-radio">
+                                <div class="bx bxs-truck icon" id="icon-truck"></div>
+                            </label>
+                            <input type="radio" id="truck-radio" name="type-vehicule" value="truck" onclick="selectType('type-vehicule', this)">
+                        </div>
+                    </div>
+                    <div class="type-vehicule">
+                        <div class="type-vehicule-title">
+                            <h3>Type de Chauffeur</h3>
+                        </div>
+                        <div class="type-vehicule-image">
+                            <label for="female-radio">
+                                <div class="bx bx-female icon" id="icon-female"></div>
+                            </label>
+                            <input type="radio" id="female-radio" name="type-chauffeur" value="female" onclick="selectType('type-chauffeur', this)">
+                            <label for="male-radio">
+                                <div class="bx bx-male icon" id="icon-male"></div>
+                            </label>
+                            <input type="radio" id="male-radio" name="type-chauffeur" value="male" onclick="selectType('type-chauffeur', this)">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex">
+                    <button class="button-go" type="submit"><p>On y va !</p></button>
+                </div>
+                <div id="error-message" style="display:none;color:red;">Veuillez remplir tous les champs nécessaires.</div>
+                <script>
+                    document.querySelector('.button-go').addEventListener('click', function(event) {
+                        if (document.querySelector('#address-input').value.trim() === '' || document.querySelector('#address-input-1').value.trim() === '') {
+                            event.preventDefault();
+                            document.querySelector('#error-message').style.display = 'block';
+                        } else {
+                            document.querySelector('#error-message').style.display = 'none';
+                        }
+                    });
+                </script>
+            </div>
+        </form>
         <div class="maps">
             <img src="Image/Carte.png">
         </div>
+        
+    </section>
 
     </section>
 
@@ -296,7 +327,91 @@ require_once 'config.php';
             </div>
         </div> 
     </section>
-    <script type="text/javascript" src="script.js"></script>
+
+    <script>
+        
+        function autoComplete() {
+            $('#address-input').autocomplete({
+                source: function(request, response) {
+                    var url = 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(request.term) + '&format=json&addressdetails=1&limit=10&email=yanismakdoud@hotmail.com';
+
+                    $.getJSON(url, function(data) {
+                        var results = [];
+                        $.each(data, function(index, item) {
+                            var address = item.address;
+                            if (address.road !== undefined && address.town !== undefined && address.postcode !== undefined) {
+                                var label = address.road + ', ' + address.town + ' ' + address.postcode;
+                                results.push({
+                                    label: label,
+                                    value: label,
+                                    latitude: item.lat,
+                                    longitude: item.lon
+                                });
+                            }
+                        });
+                        response(results);
+                    });
+                },
+                minLength: 3,
+                select: function(event, ui) {
+                    $('#address-input').val(ui.item.value);
+                    // Do something with the latitude and longitude
+                    return false;
+                }
+            });
+        };
+
+        function autoComplete1() {
+            $('#address-input-1').autocomplete({
+                source: function(request, response) {
+                var url = 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(request.term) + '&format=json&addressdetails=1&limit=10&email=yanismakdoud@hotmail.com';
+
+                $.getJSON(url, function(data) {
+                    var results = [];
+                    $.each(data, function(index, item) {
+                        var address = item.address;
+                        if (address.road !== undefined && address.town !== undefined && address.postcode !== undefined) {
+                            var label = address.road + ', ' + address.town + ' ' + address.postcode;
+                            results.push({
+                                label: label,
+                                value: label,
+                                latitude: item.lat,
+                                longitude: item.lon
+                            });
+                        }
+                    });
+                    response(results);
+                });
+            },
+            minLength: 3,
+            select: function(event, ui) {
+                $('#address-input-1').val(ui.item.value);
+                // Do something with the latitude and longitude
+                return false;
+            }
+        });
+    };
+        
+        
+
+    function selectType(className) {
+      // Parcourir tous les éléments avec la classe "bx"
+      $('.bx').each(function() {
+        // Sélectionner le parent du radio correspondant
+        var parentDiv = $(this).parent();
+        var radioName = parentDiv.find('input[type=radio]').attr('name');
+        // Vérifier si le radio est coché
+        if ($('input[name="' + radioName + '"]:checked').length > 0) {
+          // Ajouter l'ombre
+          parentDiv.addClass('selected');
+        } else {
+          // Enlever l'ombre
+          parentDiv.removeClass('selected');
+        }
+      });
+    }
+
+    </script>
 
 </body>
 </html>
