@@ -24,18 +24,18 @@
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
-    $numero = $_POST['numero'];
+    $numbercard = $_POST['numero'];
     $dateexp = $_POST['date'];
     $cvc = $_POST['cvc'];
 
-    $sql = "INSERT INTO paiement (nom, prenom, numbercard, dateexp, cvc) VALUES (:nom, :prenom, :numero, :dateexp, :cvc)";
+    $sql = "INSERT INTO paiement (nom, prenom, numbercard, dateexp, cvc) VALUES (:nom, :prenom, :numbercard, :dateexp, :cvc)";
     $stmt = $bdd->prepare($sql);
 
     // Exécuter la requête avec les paramètres
     $stmt->execute([
         'nom' => $nom,
         'prenom' => $prenom,
-        'numbercard' => $numero,
+        'numbercard' => $numbercard,
         'dateexp' => $dateexp,
         'cvc' => $cvc
 
