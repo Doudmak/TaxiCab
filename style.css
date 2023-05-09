@@ -277,7 +277,6 @@ section {
 
 .informations_title {
 
-    padding-top: 70px;
     font-size: var(--h2-font);
 }
 
@@ -325,7 +324,7 @@ section {
     font-family: calibri;
 }
 
-#ui-id-1, #ui-id-2{
+#ui-id-1, #ui-id-2, #ui-id-3,#ui-id-4,#ui-id-5,#ui-id-6,#ui-id-7,#ui-id-8, #ui-id-9, #ui-id-10, #ui-id-11, #ui-id-12 {
 
     z-index: 1010;    
 }
@@ -366,7 +365,6 @@ section {
 .flex_text_chauffeur{
     
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -376,13 +374,12 @@ section {
 
 .transparent-box{
 
-    padding: 55px 55px;
+    padding: 35px 35px;
     margin: 10px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
-    width: 610px;
-    height: 319px;
-
+    width: 570px;
+    height: 279px;
 
 }
 

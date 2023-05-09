@@ -8,6 +8,70 @@ body {
   margin: 0 auto;
   max-width: 800px;
   padding: 50px;
+
+}
+
+
+.ligne1{
+
+    margin-bottom: 15px;
+    display: flex;
+    height: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box1, .box2, .box3 {
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 95%;
+    width: 22%;
+    border-radius: 8%;
+    display: flex;
+
+}
+
+.box1, .box2{
+    display: flex;
+    font-size: 30px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.color1{
+    font-size: 35px;
+    color:#9370DB ;
+}
+
+.color2{
+    padding-left: 10px;
+    color: grey;
+    font-size: 25px; 
+}
+.box3 {
+
+    height: 110px;
+    width: 380px;
+    border-radius: 15px;
+}
+
+.box3-1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.box3-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+    border-left: 1px solid lightgrey;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Style du formulaire */
@@ -87,3 +151,6 @@ footer {
 footer a {
   color: #ffffff;
   text-decoration: none;
+}
+
+    
